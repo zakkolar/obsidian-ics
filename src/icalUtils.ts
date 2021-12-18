@@ -112,7 +112,7 @@ function findRecurringEvents(icsArray: any[], dayToMatch: string) {
 	function cloneRecurringEvent(curEvent: any, startDate: any, endDate: any) {
 		return {
 			description: curEvent.description,
-			summary: `${curEvent.summary} (recurring)`,
+			summary: `${curEvent.summary}`,
 			start: startDate.toDate(),
 			end: endDate.toDate(),
 			location: curEvent.location,
