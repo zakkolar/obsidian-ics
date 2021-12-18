@@ -65,9 +65,9 @@ export default class ICSPlugin extends Plugin {
 					}));
 					const todayEvents = filterMatchingEvents(icsArray, fileDate);
 					console.log(todayEvents);
-	
+
 					todayEvents.forEach((e) => {
-						mdArray.push(`- [ ] ${moment(e.start).format("HH:mm")} ${calendarSetting.icsName} ${e.summary} ${e.location}`.trim());
+						mdArray.push(`## ${moment(e.start).format("HH:mm")} ${calendarSetting.icsName} ${e.summary} ${e.location}`.trim());
 					});
 				}
 
